@@ -53,8 +53,8 @@ a:visited {
 }
 
 
-.text-white{
-    color:white;
+.text-white {
+    color: white;
 }
 
 
@@ -186,7 +186,7 @@ p {
     letter-spacing: normal;
 }
 
-b{
+b {
     font-family: 'Rubik';
     font-weight: 400;
 }
@@ -305,7 +305,7 @@ b{
     padding: 15px 0;
     font-size: 14px;
     font-weight: 500;
-    margin:0;
+    margin: 0;
 }
 
 .button::before {
@@ -563,6 +563,11 @@ b{
         font-size: 30px;
         font-weight: 200;
         padding-bottom: 15px;
+    }
+
+
+    .intro {
+        height: 300px;
     }
 
 

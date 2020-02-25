@@ -144,6 +144,8 @@ ScrollReveal().reveal('.slideleft-delay', { duration: 500, delay: 1000, origin: 
 <script type="text/javascript" src="skrollr.min.js"></script>
 <script type="text/javascript">
 var s = skrollr.init();
+if (s.isMobile()) {
+    s.destroy();}
 </script>
         <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 
