@@ -1,0 +1,104 @@
+.resume-intro {
+    max-width: 1200px;
+    padding: 0px 5%;
+    position: relative;
+
+}
+
+.intro-top {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap-reverse;
+}
+
+.intro-bottom {
+    margin-top: 30px;
+    margin-bottom: 100px;
+}
+
+.hello {
+    margin: 0;
+}
+
+
+.hello span {
+    font-family: 'Rubik';
+    color: #4476e6;
+    cursor: pointer;
+    font-weight: 400;
+
+}
+
+.hello span:after {
+    content: "";
+    background-color: #4476e6;
+    height: 1px;
+    width: 0%;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+}
+
+.highlight:hover:after {
+    width: 100%;
+    transition: 0.2s cubic-bezier(0.65, 0, 0.17, 0.98);
+
+}
+
+
+.profile {
+    position: absolute;
+    top: -59px;
+    left: 424px;
+    opacity: 0;
+    z-index: -1;
+
+}
+
+.profile img {
+    width: 30%;
+}
+
+
+.check{
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	padding-top: 68px;
+}
+
+.check p {
+
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.86;
+    margin: 0;
+}
+
+.line{
+	height: 1px;
+	width: 94px;
+	background-color: #333333;
+	margin: 0;
+	margin-left: 20px;
+}
+
+.social{
+	margin: 0;
+	margin-left: 29px;
+}
+
+.social:hover img{
+	transform: scale(1.1);
+	transition: 0.5s;
+}
+
+
+@media screen and (max-width: 874px) {
+    .profile {
+        display: none;
+    }
+
+}

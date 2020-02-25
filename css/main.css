@@ -1,0 +1,653 @@
+* {
+    font-family: SF Display, 'Rubik', PingFangTC, sans-serif;
+    position: relative;
+    margin: 0 auto;
+    padding: 0;
+    /*transition: 1s;*/
+    /*border: solid 1px black;*/
+}
+
+
+html,
+body {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    background-color: #fafafa;
+
+
+
+}
+
+html.sr .load-hidden {
+    visibility: hidden;
+}
+
+
+
+ul,
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: #333333;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+
+
+/*navbar------------------------*/
+
+.navbar {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    background-color: #fff;
+}
+
+
+.text-white{
+    color:white;
+}
+
+
+
+.navbar ul {
+    position: absolute;
+    display: flex;
+    top: 70px;
+    left: 5%;
+}
+
+.nav-item {
+    padding-right: 40px;
+}
+
+.menu-mobile {
+    position: absolute;
+    top: 45px;
+    left: 5%;
+    display: none;
+}
+
+
+.circle {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: #E2EBFF;
+    display: flex;
+    z-index: 6;
+    cursor: pointer;
+
+}
+
+.bodymovinanim {
+    width: 50%;
+}
+
+svg path {
+    stroke-width: 1;
+    stroke: #333333;
+}
+
+.nav-item:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #4476e6;
+    border: solid 0px;
+    bottom: 28px;
+    left: 24px;
+    opacity: 0;
+
+}
+
+.nav-item:hover a,
+.nav-item:hover:before {
+    color: #4476e6;
+    transition: 1s;
+    opacity: 1;
+
+}
+
+.nav-item a {
+    font-size: 18px;
+}
+
+.logo {
+    position: absolute;
+    right: 5%;
+    top: 20px;
+}
+
+.logo.mobile {
+    display: none;
+
+}
+
+.logo img {
+    width: 100%;
+}
+
+b {
+    color: #4476e6;
+    font-weight: 300;
+}
+
+
+
+/*intro------------------------*/
+
+.content {
+    padding-top: 200px;
+    position: relative;
+}
+
+h1 {
+    font-family: 'Rubik';
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 66px;
+    color: #333333;
+}
+
+h3 {
+    opacity: 0.5;
+    font-size: 36px;
+    font-weight: 300;
+    line-height: 1.39;
+
+}
+
+h6 {
+    font-family: 'Rubik';
+    font-size: 20px;
+    line-height: 1.3;
+    color: #333333;
+    font-weight: 400;
+}
+
+p {
+    font-size: 15px;
+    line-height: 28px;
+    color: #333333;
+    font-weight: 200;
+    letter-spacing: normal;
+}
+
+b{
+    font-family: 'Rubik';
+    font-weight: 400;
+}
+
+
+
+
+.intro {
+    max-width: 1366px;
+    height: 150px;
+}
+
+
+
+
+.intro,
+.works,
+.text-block,
+.text-block-footer {
+    max-width: 1366px;
+    padding: 0 5%;
+}
+
+/*Works------------------------*/
+.works {
+    max-width: 1366px;
+    margin-top: 10%;
+}
+
+.work-group {
+    display: flex;
+    flex-flow: nowrap;
+    justify-content: space-between;
+    margin-bottom: 10%;
+    position: relative;
+    width: 100%;
+}
+
+.flex-row-reverse {
+    flex-direction: row-reverse;
+}
+
+.align-bottom {
+    align-items: flex-end;
+}
+
+
+
+.group-big {
+    width: 58%;
+}
+
+.group-small {
+    width: 38%;
+}
+
+
+.project-box {
+    margin: 0;
+
+}
+
+
+
+.project-box:hover .project-img {
+    background-size: 110%;
+    transform: scale(0.97);
+    transition: 0.7s ease-out;
+}
+
+
+
+.project-img {
+    overflow: hidden;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: 103%;
+    height: 0;
+    padding-top: 61.6%;
+    transition: 0.7s ease-out;
+    position: relative;
+}
+
+
+
+.project-name {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.project-name p {
+    opacity: 0.5;
+}
+
+
+/*know more------------------------*/
+
+.know-more {
+    /*display: none;*/
+    background-color: #EFFAF7;
+    padding: 10% 0;
+    width: 100%;
+
+}
+
+
+.title {
+    padding-top: -15px;
+}
+
+.title h1 {
+    margin-top: -14px;
+}
+
+.button {
+    padding: 15px 0;
+    font-size: 14px;
+    font-weight: 500;
+    margin:0;
+}
+
+.button::before {
+    content: url(../img/arrow.svg);
+    margin-right: 10px;
+
+
+}
+
+.button a:hover {
+    padding-left: 10px;
+    transition: 1s;
+}
+
+
+.text-block {
+    max-width: 1366px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    top: 33%;
+
+}
+
+.title {
+    width: 40%;
+}
+
+.paragraph {
+    width: 60%;
+}
+
+
+.underline {
+    border-bottom: 2px solid #4476e6;
+    width: 76px;
+    margin: 20px 0;
+}
+
+
+/*footer------------------------*/
+
+#footer {
+    background-color: #1d1d1d;
+    z-index: 0;
+    padding: 100px 0 50px;
+}
+
+.text-block-footer {
+    max-width: 1366px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+.footer-block {
+    width: 100%;
+    display: flex;
+
+}
+
+.footer-bottom {
+
+    padding-top: 120px;
+
+}
+
+
+
+.text-left,
+.text-right {
+    margin: 0px;
+
+}
+
+.text-left {
+    width: 60%;
+}
+
+.text-right {
+    width: 40%;
+}
+
+.text-right h1,
+.text-right a {
+    color: #fff;
+}
+
+.text-right a {
+    font-weight: 200;
+}
+
+
+.text-left p {
+    color: #fff;
+    opacity: 0.5;
+    font-size: 14px;
+}
+
+.social-link {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 200;
+    margin-right: 30px;
+}
+
+.social-link:after {
+    content: "";
+    position: absolute;
+    display: block;
+    border-bottom: 1px solid #ffff;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    background: #ffff;
+}
+
+.social-link:hover:after {
+    width: 100%;
+    transition: 0.2s cubic-bezier(0.65, 0, 0.17, 0.98);
+}
+
+#arrow-top {
+    position: absolute;
+    right: 5%;
+    top: 119px;
+    z-index: 1;
+    cursor: pointer;
+}
+
+
+
+/*RWD:765px------------------------*/
+
+
+
+@media screen and (max-width: 765px) {
+
+    .group-big {
+        width: 48%;
+    }
+
+    .group-small {
+        width: 48%;
+    }
+
+
+    .know-more {
+        margin-top: 0px;
+        padding: 100px 0;
+    }
+
+    .text-block {
+        flex-direction: column;
+        align-items: flex-start;
+
+    }
+
+
+    .title {
+        width: 100%;
+    }
+
+    .paragraph {
+        width: 100%;
+    }
+
+    .text-block-footer {
+        padding: 0 5%;
+    }
+
+
+    .text-right,
+    .text-left {
+        width: 100%;
+        padding: 20px 0;
+    }
+
+
+    .footer-block {
+        flex-flow: column;
+    }
+
+    .footer-bottom {
+        flex-flow: column-reverse;
+    }
+
+
+
+}
+
+@media screen and (max-width: 625px) {
+    .work-group {
+        flex-flow: column;
+    }
+
+    .group-big,
+    .group-small {
+        width: 100%;
+    }
+
+    .project-box {
+        margin-top: 10%;
+    }
+
+}
+
+@media screen and (max-width: 425px) {
+
+
+
+    .logo {
+        display: none;
+    }
+
+    .logo.mobile img {
+        width: 70%;
+    }
+
+    .logo.mobile {
+        position: absolute;
+        right: -17px;
+        top: 20px;
+        display: initial;
+    }
+
+    .navbar ul {
+        display: none;
+    }
+
+
+    .menu-mobile {
+        display: initial;
+    }
+
+
+
+    .float-menu {
+        background-color: white;
+        width: 425px;
+        height: 100vh;
+        margin-left: -30px;
+        position: fixed;
+        display: none;
+        top: 0;
+        padding: 150px 31px;
+        z-index: 5;
+        transition: 0.5s;
+
+    }
+
+
+    .menu-item {
+        font-size: 30px;
+        font-weight: 200;
+        padding-bottom: 15px;
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*---------------------------------------------------------------------------*
+ * SF UI Display
+ *---------------------------------------------------------------------------*/
+
+/** Black */
+@font-face {
+    font-family: "SF Display";
+    font-weight: 900;
+    src: url("https://sf.abarba.me/SF-UI-Display-Black.otf");
+}
+
+/** Bold */
+@font-face {
+    font-family: "SF Display";
+    font-weight: 700;
+    src: url("https://sf.abarba.me/SF-UI-Display-Bold.otf");
+}
+
+/** Heavy */
+@font-face {
+    font-family: "SF Display";
+    font-weight: 800;
+    src: url("https://sf.abarba.me/SF-UI-Display-Heavy.otf");
+}
+
+/** Light */
+@font-face {
+    font-family: "SF Display";
+    font-weight: 200;
+    src: url("https://sf.abarba.me/SF-UI-Display-Light.otf");
+}
+
+/** Medium */
+@font-face {
+    font-family: "SF Display";
+    font-weight: 500;
+    src: url("https://sf.abarba.me/SF-UI-Display-Medium.otf");
+}
+
+/** Regular */
+@font-face {
+    font-family: "SF Display";
+    font-weight: 400;
+    src: url("https://sf.abarba.me/SF-UI-Display-Regular.otf");
+}
+
+/** Semibold */
+@font-face {
+    font-family: "SF Display";
+    font-weight: 600;
+    src: url("https://sf.abarba.me/SF-UI-Display-Semibold.otf");
+}
+
+/** Thin */
+@font-face {
+    font-family: "SF Display";
+    font-weight: 300;
+    src: url("https://sf.abarba.me/SF-UI-Display-Thin.otf");
+}
+
+/** Ultralight */
+@font-face {
+    font-family: "SF Display";
+    font-weight: 100;
+    src: url("https://sf.abarba.me/SF-UI-Display-Ultralight.otf");
+}
+
+/*---------------------------------------------------------------------------*
+ * 'Rubik'
+ *---------------------------------------------------------------------------*/
+
+@import url('https://fonts.googleapis.com/css?family=Rubik:300,400&display=swap');
