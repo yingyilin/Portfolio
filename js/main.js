@@ -23,9 +23,12 @@ $(document).ready(function() {
 
 
     ///手機版menu
-    $(".circle").click(function(event) {
-        $(".float-menu").toggle();
+    $(".menu-icon").click(function(event) {
+        $(".float-menu").show();
+    });
 
+    $(".close-icon").click(function(event) {
+        $(".float-menu").hide();
     });
 
 

@@ -30,8 +30,8 @@
     max-width: 1366px;
     position: absolute;
     left: 0;
-    right:0;
-    top:50%;
+    right: 0;
+    top: 50%;
     transform: translateY(-50%);
 
     display: flex;
@@ -59,7 +59,7 @@
 .work-year p {
     font-size: 18px;
     color: white;
-    font-weight: 100;
+    font-weight: 400;
     margin: 0 20px;
     letter-spacing: 1px;
 
@@ -100,22 +100,23 @@
     margin: 0;
     display: flex;
     flex-flow: row wrap;
-    width:100%;
-    
+    width: 100%;
+
 
 }
 
-.w-100{
-    width:100%;
+.w-100 {
+    width: 100%;
 }
-.w-30{
+
+.w-30 {
     width: 30%;
 }
 
 .category {
     padding-bottom: 50px;
-    padding-right:25px;
-    margin:0;
+    padding-right: 25px;
+    margin: 0;
 
 }
 
@@ -155,20 +156,26 @@
 
 @media screen and (max-width: 625px) {
 
-	.work-intro{
-		flex-wrap: wrap-reverse;
-	}
+    .work-intro {
+        flex-wrap: wrap-reverse;
+    }
 
 
-    .w-30{
+    .w-30 {
         width: 100%
     }
 
 
+}
 
 
+@media screen and (max-width: 425px) {
+
+    .line {
+        width: 30px;
+       
+    }
 
 
-    
 
 }

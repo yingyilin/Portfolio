@@ -78,25 +78,9 @@ a:visited {
 }
 
 
-.circle {
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
-    background-color: #E2EBFF;
-    display: flex;
-    z-index: 6;
-    cursor: pointer;
 
-}
 
-.bodymovinanim {
-    width: 50%;
-}
 
-svg path {
-    stroke-width: 1;
-    stroke: #333333;
-}
 
 .nav-item:before {
     content: "";
@@ -543,19 +527,38 @@ b {
     }
 
 
+    .menu-icon {
+        cursor: pointer;
+    }
+
+
+
+    .close-icon {
+        cursor: pointer;
+        position: absolute;
+        right: 10%;
+        z-index: 6;
+    }
+
+
 
     .float-menu {
         background-color: white;
-        width: 425px;
+        width: 100vw;
         height: 100vh;
         margin-left: -30px;
         position: fixed;
         display: none;
         top: 0;
-        padding: 150px 31px;
+        padding: 30px 31px;
         z-index: 5;
         transition: 0.5s;
 
+    }
+
+
+    .menu-list {
+        padding-top: 90px;
     }
 
 
@@ -572,14 +575,6 @@ b {
 
 
 }
-
-
-
-
-
-
-
-
 
 
 
@@ -650,9 +645,3 @@ b {
     font-weight: 100;
     src: url("https://sf.abarba.me/SF-UI-Display-Ultralight.otf");
 }
-
-/*---------------------------------------------------------------------------*
- * 'Rubik'
- *---------------------------------------------------------------------------*/
-
-@import url('https://fonts.googleapis.com/css?family=Rubik:300,400&display=swap');
