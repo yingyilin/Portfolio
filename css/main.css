@@ -39,6 +39,11 @@ a:visited {
 }
 
 
+.position-fixed{
+    position: fixed;
+}
+
+
 
 /*navbar------------------------*/
 
@@ -181,6 +186,11 @@ b {
 .intro {
     max-width: 1366px;
     height: 150px;
+}
+
+.page-title {
+    max-width: 1366px;
+    padding: 0 5%;
 }
 
 

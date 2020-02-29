@@ -25,10 +25,12 @@ $(document).ready(function() {
     ///手機版menu
     $(".menu-icon").click(function(event) {
         $(".float-menu").show();
+        $("body").addClass('position-fixed');
     });
 
     $(".close-icon").click(function(event) {
         $(".float-menu").hide();
+        $("body").removeClass('position-fixed');
     });
 
 
