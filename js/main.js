@@ -67,12 +67,12 @@ $(document).ready(function() {
         .type("Hello, I am Lauren,")
         .pause(500)
         .break()
-        .options({ deleteSpeed: 75 })
-        .type("a Taiwan based <b>Graphic Design</b>")
-        .delete(14)
+        // .options({ deleteSpeed: 75 })
+        // .type("a Taiwan based <b>Graphic Design</b>")
+        // .delete(14)
         .options({ speed: 75 })
         .pause(500)
-        .type("<b>UI/UX Designer.</b>")
+        .type("<b>a Taiwan based Product Designer.</b>")
         .go();
 
 
