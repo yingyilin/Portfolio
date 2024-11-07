@@ -845,7 +845,7 @@
           volumeIcon.textContent = video.muted ? 'volume_off' : 'volume_up';
         });
 
-        // 為音量按鈕添加觸控事件
+        // 為音量按鈕添加��控事件
         volumeBtn.addEventListener('touchstart', (e) => {
           e.preventDefault();
           e.stopPropagation();
@@ -931,6 +931,44 @@
       }
 
       updateProgressWithAnimation();
+
+      // Add touch event handlers for progress bar
+      progressContainer.addEventListener('touchstart', function(e) {
+        isDragging = true;
+        track.style.animation = 'none';
+        const touch = e.touches[0];
+        const percent = handleProgressTouch(touch);
+        updateProgress(percent);
+        pausedProgress = percent;
+      });
+
+      document.addEventListener('touchmove', function(e) {
+        if (isDragging) {
+          const touch = e.touches[0];
+          const percent = handleProgressTouch(touch);
+          updateProgress(percent);
+          pausedProgress = percent;
+        }
+      });
+
+      document.addEventListener('touchend', function() {
+        if (isDragging) {
+          isDragging = false;
+          
+          if (!isPaused()) {
+            startTime = performance.now() - (pausedProgress / 100 * animationDuration * 1000);
+            track.style.animation = `scroll ${animationDuration}s linear infinite`;
+            track.style.animationDelay = `${-(pausedProgress / 100 * animationDuration)}s`;
+          }
+        }
+      });
+
+      // Add helper function for touch events
+      function handleProgressTouch(touch) {
+        const rect = progressContainer.getBoundingClientRect();
+        const percent = ((touch.clientX - rect.left) / rect.width) * 100;
+        return Math.max(0, Math.min(100, percent));
+      }
     });
     </script>
 
